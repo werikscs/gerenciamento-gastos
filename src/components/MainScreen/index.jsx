@@ -1,9 +1,9 @@
 import logoNuKenzieB from '../../img/Nu-Kenzie-b.svg';
 
-const MainScreen = ({goToInitialScreen}) => {
+const MainScreen = ({setIsOnInitialScreen}) => {
 
   const backToInitialScreen = () => {
-    goToInitialScreen(true)
+    setIsOnInitialScreen(true)
   }
 
   return (

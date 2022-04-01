@@ -13,7 +13,7 @@ function App() {
       isOnInitialScreen ?
       <InitialScreen setIsOnInitialScreen={setIsOnInitialScreen}/>
       :
-      <MainScreen goToInitialScreen={setIsOnInitialScreen}/>
+      <MainScreen setIsOnInitialScreen={setIsOnInitialScreen}/>
     )
   }
 
