@@ -8,6 +8,7 @@
   --color-grey-1: #F8F9FA;
   --color-background: #212529;
 
+  --max-width-header-main: 980px;
 }
 
 *{
