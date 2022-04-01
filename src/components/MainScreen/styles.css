@@ -1,4 +1,13 @@
-
-
-
-
+.btnHeight40{
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-nunito);
+  line-height: 19px;
+  cursor: pointer;
+}

@@ -8,7 +8,7 @@ const MainHeader = ({backToInitialScreen}) => {
     <header className='mainHeader'>
       <section className='mainHeader__section'>
         <img src={logoNuKenzieB} alt="" />
-        <Button callback={backToInitialScreen} text="Início" bgColor="btnGrey"/>
+        <Button callback={backToInitialScreen} text="Início" bgColor="btnHeight40"/>
       </section>
     </header>
   )

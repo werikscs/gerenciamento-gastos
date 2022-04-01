@@ -9,6 +9,7 @@
   --color-background: #212529;
 
   --max-width-header-main: 980px;
+  --font-nunito: 'Nunito', sans-serif;
 }
 
 *{
@@ -21,5 +22,5 @@
   width: 100vw;
   min-width: 320px;
   min-height: 100vh;
-  background-color: var(--color-background);
+  background-color: #FFFFFF;
 }
