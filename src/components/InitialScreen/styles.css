@@ -37,13 +37,23 @@
   margin-left: -20px;
 }
 
-.initialScreenLeft .button{
-  max-width: 241px;
-  /* align-self: center; */
+.initialScreenLeft button{
+  width: 241px;
+  height: 48px;
+  font-size: 16px;
+  color: #FFFFFF;
+  background-color: var(--color-primary);
+  border-radius: 8px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.initialScreenLeft button:hover{
+  background-color: var(--color-primary-2);
 }
 
 .initialScreenRight{
-  /* width: 100%; */
   max-width: 340px;
   margin: 16px;
   display: flex;
@@ -53,6 +63,12 @@
 .initialScreenRight img{
   width: 100%;
   max-width: 593px;
+  transition: 0.25s;
+}
+
+.initialScreenRight img:hover{
+  transform: scale(1.05);
+  transition: 0.25s;
 }
 
 @media screen and (min-width: 1024px) {
@@ -68,12 +84,10 @@
   }
 
   .initialScreenRight{
-    /* width: 100%; */
     max-width: unset;
     margin: 16px;
     display: flex;
     align-items: center;
   }
-  
 
 }
