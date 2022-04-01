@@ -17,10 +17,8 @@
 }
 
 .App{
-  min-width: 320px;
   width: 100vw;
+  min-width: 320px;
   min-height: 100vh;
-  height: 100%;
-  display: flex;
   background-color: var(--color-background);
 }
