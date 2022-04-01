@@ -1,8 +1,8 @@
 import './styles.css';
 
-const Button = ({callback, bgColor}) => {
+const Button = ({callback, text, bgColor}) => {
   return (
-    <button className={bgColor} onClick={callback}></button>
+    <button className={bgColor} onClick={callback}>{text}</button>
   )
 }
 
