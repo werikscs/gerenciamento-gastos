@@ -1,3 +1,4 @@
+import Form from '../Form';
 import MainHeader from '../MainHeader';
 import './styles.css';
 
@@ -12,7 +13,7 @@ const MainScreen = ({setIsOnInitialScreen}) => {
       <MainHeader backToInitialScreen={backToInitialScreen}/>
       <main className='main'>
         <section className='main__form-total-money'>
-          {/* form */}
+          <Form/>
           {/* total money */}
         </section>
         {/* List */}
