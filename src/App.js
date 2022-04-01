@@ -11,7 +11,7 @@ function App() {
   const toggleScreen = (setIsOnInitialScreen) => {
     return (
       isOnInitialScreen ?
-      <InitialScreen goToMainScreen={setIsOnInitialScreen}/>
+      <InitialScreen setIsOnInitialScreen={setIsOnInitialScreen}/>
       :
       <MainScreen goToInitialScreen={setIsOnInitialScreen}/>
     )

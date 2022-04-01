@@ -5,7 +5,12 @@ import circleIcon from '../../img/circle.svg';
 
 import './styles.css';
 
-const InitialScreen = () => {
+const InitialScreen = ({setIsOnInitialScreen}) => {
+
+  const backToMainScreen = () => {
+    setIsOnInitialScreen(false)
+  }
+
   return (
     <section className='initialScreen'>
       <section className='initialScreenLeft'>
@@ -16,7 +21,7 @@ const InitialScreen = () => {
         {/* de foma rápida e segura */}
         <img className='deFormaText' src={deFormaRapidaText} alt="" />
         {/* botão iniciar */}
-        <button>Iniciar</button>
+        <button onClick={backToMainScreen}>Iniciar</button>
       </section>
 
       <section className='initialScreenRight'>
