@@ -10,8 +10,12 @@ const MainScreen = ({setIsOnInitialScreen}) => {
   return (
     <>
       <MainHeader backToInitialScreen={backToInitialScreen}/>
-      <main>
-
+      <main className='main'>
+        <section className='main__form-total-money'>
+          {/* form */}
+          {/* total money */}
+        </section>
+        {/* List */}
       </main>
     </>
   )
