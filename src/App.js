@@ -6,7 +6,7 @@ import MainScreen from './components/MainScreen';
 
 function App() {
 
-  const [isOnInitialScreen, setIsOnInitialScreen] = useState(false);
+  const [isOnInitialScreen, setIsOnInitialScreen] = useState(true);
 
   const toggleScreen = (setIsOnInitialScreen) => {
     return (

@@ -1,4 +1,5 @@
-import logoNuKenzieB from '../../img/Nu-Kenzie-b.svg';
+import MainHeader from '../MainHeader';
+import './styles.css';
 
 const MainScreen = ({setIsOnInitialScreen}) => {
 
@@ -8,12 +9,7 @@ const MainScreen = ({setIsOnInitialScreen}) => {
 
   return (
     <>
-      <header>
-        <section>
-          <img src={logoNuKenzieB} alt="" />
-          <button onClick={backToInitialScreen}>Início</button>
-        </section>
-      </header>
+      <MainHeader backToInitialScreen={backToInitialScreen}/>
       <main>
 
       </main>
