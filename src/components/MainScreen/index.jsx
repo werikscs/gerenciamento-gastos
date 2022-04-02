@@ -14,6 +14,8 @@ const MainScreen = ({setIsOnInitialScreen}) => {
     { description: "Salário recebido", type: "Entrada", value: 2500 },
     { description: "Conta de luz", type: "Despesa", value: -150 }
   ]);
+
+  const [listFiltered, setListFiltered] = useState(listTransactions);
   
   const backToInitialScreen = () => {
     setIsOnInitialScreen(true)
@@ -21,20 +23,34 @@ const MainScreen = ({setIsOnInitialScreen}) => {
 
   return (
     <>
-      <MainHeader backToInitialScreen={backToInitialScreen}/>
+      <MainHeader backToInitialScreen={backToInitialScreen} />
+
       <main className='main'>
+
         <section className='main__form-total-money'>
+
           <Form
             listTransactions={listTransactions}
             setListTransactions={setListTransactions}
-          />
-          <TotalMoney listTransactions={listTransactions}/>
+            setListFiltered={setListFiltered} />
+
+          <TotalMoney listTransactions={listTransactions} />
+
         </section>
+
         <section className='main__filters-list'>
-          <Filters/>
-          <List listTransactions={listTransactions}/>
+
+          <Filters
+            listTransactions={listTransactions}
+            listFiltered={listFiltered}
+            setListFiltered={setListFiltered} />
+
+          <List listTransactions={listFiltered} />
+
         </section>
+
       </main>
+
     </>
   )
 }

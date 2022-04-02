@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './styles.css';
 
-const Form = ({listTransactions, setListTransactions}) => {
+const Form = ({listTransactions, setListTransactions, setListFiltered}) => {
 
   const [description, setDescription] = useState('');
   const [value, setValue] = useState('');
@@ -9,6 +9,7 @@ const Form = ({listTransactions, setListTransactions}) => {
 
   const updateTransactions = (transaction) => {
     setListTransactions([...listTransactions, transaction]);
+    setListFiltered([...listTransactions, transaction]);
   }
 
   const handleData = (e) => {
