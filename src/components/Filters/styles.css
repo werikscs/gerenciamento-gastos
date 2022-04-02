@@ -1,8 +1,13 @@
 .filters{
+  top: 0;
+  padding: 20px 0;
+  position: sticky;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #FFFFFF;
+  z-index: 10;
 }
 
 .filters__text{
