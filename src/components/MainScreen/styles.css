@@ -1,22 +1,33 @@
 .main{
+  width: 100%;
   max-width: var(--max-width-header-main);
-  margin: 39px auto 0;
+  padding: 39px 15px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
+.main__form-total-money{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 363px;
+}
+
 .main__filters-list{
   width: 100%;
   max-width: 363px;
   margin-top: 16px;
+  /* align-self: flex-start; */
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .main{
     flex-direction: row;
     align-items: flex-start;
+    margin: 0 auto;
+    gap: 59px;
   }
 
   .main__filters-list{

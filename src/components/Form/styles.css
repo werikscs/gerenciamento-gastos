@@ -1,6 +1,7 @@
 form{
   border: 1px solid var(--color-grey-2);
   border-radius: 4px;
+  width: 100%;
   max-width: 363px;
   padding: 38px 24.5px;
   display: flex;
@@ -9,6 +10,7 @@ form{
 }
 
 .form__description{
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -49,13 +51,16 @@ form{
 }
 
 .form__values{
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-top: 17.7px;
   margin-bottom: 19px;
+  gap: 36px;
 }
 
 .values, .types{
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -78,12 +83,12 @@ form{
   outline: none;
 }
 
-.values section:focus{
+.values section:focus, .types section:focus{
   outline: 1.2px solid var(--color-grey-4);
   border: none;
 }
 
-.values input, .types input{
+.values input, .types select{
   font-family: var(--font-inter);
   height: 48px;
   background-color: transparent;
@@ -94,20 +99,37 @@ form{
 }
 
 .values input{
-  width: 128px;
+  width: 100%;
+  max-width: 128px;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
+  appearance: none;
 }
 
-.types input{
-  width: 150px;
+/* https://css-tricks.com/snippets/css/turn-off-number-input-spinners/ */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.values input:focus, .types select:focus{
+  color: var(--color-grey-4);
+}
+
+.types select{
+  width: 100%;
+  max-width: 150px;
   font-size: 12px;
   font-weight: 400;
   line-height: 26px;
+  appearance: none;
+  background: url('../../img/ANGLE-DOWN.svg') no-repeat right;
+  background-position: right 16px bottom 50%;
 }
 
-.values span, .types img{
+.values span{
   position: absolute;
   right: 15px;
 }
@@ -120,7 +142,7 @@ form{
 }
 
 form button{
-  width: 314px;
+  max-width: 314px;
   height: 48px;
   font-family: var(--font-inter);
   font-size: 16px;

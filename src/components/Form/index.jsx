@@ -1,4 +1,3 @@
-import angleDown from '../../img/ANGLE-DOWN.svg';
 import './styles.css';
 
 const Form = () => {
@@ -19,7 +18,7 @@ const Form = () => {
             <label>Valor</label>
 
             <section>
-              <input type="text" placeholder="1" />
+              <input type="number" placeholder="1" maxLength={7} />
               <span>R$</span>
             </section>
 
@@ -30,8 +29,11 @@ const Form = () => {
             <label>Tipo de valor</label>
 
             <section>
-              <input type="text" placeholder="Entrada" />
-              <img src={angleDown} alt="" />
+              <select name="select">
+                <option value="Entrada" selected>Entrada</option>
+                <option value="Despesa">Despesa</option>
+              </select>
+              {/* <img src={angleDown} alt="" /> */}
             </section>
 
           </section>

@@ -16,6 +16,11 @@
 .filters__buttons{
   display: flex;
   gap: 16px;
+  overflow: scroll;
+}
+
+.filters__buttons::-webkit-scrollbar{
+  display: none;
 }
 
 .filters__buttons > *{
@@ -29,7 +34,7 @@
 }
 
 .filters__buttons .todos{
-  width: 69px;
+  max-width: 69px;
   background-color: var(--color-primary);
   color: #FFFFFF;
 }
@@ -39,10 +44,10 @@
 }
 
 .filters__buttons .entradas{
-  width: 87px;
+  max-width: 87px;
 }
 
 .filters__buttons .despesas{
-  width: 92px;
+  max-width: 92px;
 }
 
