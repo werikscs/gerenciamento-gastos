@@ -29,13 +29,11 @@
     flex-direction: row;
     align-items: flex-start;
     margin: 0 auto;
-    padding-right: 30px;
+    /* padding-right: 30px; */
     gap: 59px;
   }
 
   .main__form-total-money{
-    position: sticky;
-    top: 140px;
     max-width: 363px;
   }
 
