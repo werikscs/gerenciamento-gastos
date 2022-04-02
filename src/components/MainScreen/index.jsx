@@ -1,7 +1,9 @@
-import Filters from '../Filters';
-import Form from '../Form';
 import MainHeader from '../MainHeader';
+import Form from '../Form';
 import TotalMoney from '../TotalMoney';
+import Filters from '../Filters';
+import List from '../List';
+
 import './styles.css';
 
 const MainScreen = ({setIsOnInitialScreen}) => {
@@ -20,7 +22,7 @@ const MainScreen = ({setIsOnInitialScreen}) => {
         </section>
         <section className='main__filters-list'>
           <Filters/>
-          {/* list */}
+          <List/>
         </section>
       </main>
     </>
