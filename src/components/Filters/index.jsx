@@ -6,9 +6,9 @@ const Filters = () => {
     <section className="filters">
       <span className="filters__text">Resumo Financeiro</span>
       <section className="filters__buttons">
-        <Button className="btnHeight40 first" text="Todos"/>
-        <Button className="btnHeight40" text="Entradas"/>
-        <Button className="btnHeight40" text="Despesas"/>
+        <Button className="btnHeight40 todos" text="Todos"/>
+        <Button className="btnHeight40 entradas" text="Entradas"/>
+        <Button className="btnHeight40 despesas" text="Despesas"/>
       </section>
     </section>
   )

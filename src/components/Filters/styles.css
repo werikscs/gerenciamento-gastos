@@ -28,12 +28,21 @@
   color: var(--color-grey-1);
 }
 
-.filters__buttons .first{
+.filters__buttons .todos{
+  width: 69px;
   background-color: var(--color-primary);
   color: #FFFFFF;
 }
 
-.filters__buttons .first:hover{
+.filters__buttons .todos:hover{
   background-color: var(--color-primary-2);
+}
+
+.filters__buttons .entradas{
+  width: 87px;
+}
+
+.filters__buttons .despesas{
+  width: 92px;
 }
 
