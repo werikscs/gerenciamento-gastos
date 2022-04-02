@@ -16,7 +16,10 @@ const MainScreen = ({setIsOnInitialScreen}) => {
           <Form/>
           {/* total money */}
         </section>
-        {/* List */}
+        <section className='main__filters-list'>
+          {/* filters */}
+          {/* list */}
+        </section>
       </main>
     </>
   )
