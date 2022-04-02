@@ -18,7 +18,7 @@ const Form = () => {
             <label>Valor</label>
 
             <section>
-              <input type="number" placeholder="1" maxLength={7} />
+              <input type="number" placeholder="1" />
               <span>R$</span>
             </section>
 
@@ -29,11 +29,10 @@ const Form = () => {
             <label>Tipo de valor</label>
 
             <section>
-              <select name="select">
-                <option value="Entrada" selected>Entrada</option>
+              <select values={'Entrada'}>
+                <option value="Entrada">Entrada</option>
                 <option value="Despesa">Despesa</option>
               </select>
-              {/* <img src={angleDown} alt="" /> */}
             </section>
 
           </section>

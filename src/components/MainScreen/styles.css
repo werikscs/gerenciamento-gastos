@@ -26,6 +26,7 @@
   .main{
     flex-direction: row;
     align-items: flex-start;
+    /* padding: 39px 15px 0; */
     margin: 0 auto;
     gap: 59px;
   }
@@ -33,5 +34,11 @@
   .main__filters-list{
     max-width: 560px;
     margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1010px){
+  .main{
+    padding: 39px 0 0;
   }
 }

@@ -114,9 +114,9 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
-.values input:focus, .types select:focus{
+/* .values input:focus, .types select:focus{
   color: var(--color-grey-4);
-}
+} */
 
 .types select{
   width: 100%;
