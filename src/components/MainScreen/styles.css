@@ -11,13 +11,15 @@
 .main__form-total-money{
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 363px;
+  width: 100%;  
+  max-width: 600px;
+  align-items: center;
 }
 
 .main__filters-list{
   width: 100%;
-  max-width: 363px;
+  max-width: 600px;
+  /* max-width: 363px; */
   margin-top: 16px;
   /* align-self: flex-start; */
 }
@@ -31,6 +33,10 @@
     gap: 59px;
   }
 
+  .main__form-total-money{
+    max-width: 363px;
+  }
+
   .main__filters-list{
     max-width: 560px;
     margin-top: 0;
@@ -41,4 +47,5 @@
   .main{
     padding: 39px 0 0;
   }
+
 }
