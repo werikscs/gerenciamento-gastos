@@ -1,7 +1,7 @@
 .filters{
   top: 0;
-  padding: 20px 0;
   position: sticky;
+  padding: 20px 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -54,5 +54,11 @@
 
 .filters__buttons .despesas{
   max-width: 92px;
+}
+
+@media screen and (min-width: 768px) {
+  .filters{
+    position: static;
+  }
 }
 
