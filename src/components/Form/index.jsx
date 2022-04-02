@@ -17,7 +17,7 @@ const Form = ({listTransactions, setListTransactions}) => {
     updateTransactions({
       description : description,
       type: type,
-      value: value
+      value: Number(value)
     })
 
     setDescription('');

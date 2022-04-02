@@ -9,7 +9,7 @@ const List = ({listTransactions}) => {
       <Card
         key={i}
         description={description}
-        cost={value}
+        cost={value.toLocaleString('pt-br', {minimumFractionDigits: 2})}
         type={type}
       />
     )
