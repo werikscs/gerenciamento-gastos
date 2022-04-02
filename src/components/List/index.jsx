@@ -17,49 +17,19 @@ const List = ({listTransactions}) => {
 
   return (
     <ul className="card-list">
-      {cardList}
-      {/* <CardEmpty/>
-      <Card
-        description='Salário - Mês Dezembro'
-        cost='6.660,00'
-        type='Entrada'
-      />
-      <Card
-        description='Salário - Mês Dezembro'
-        cost='6.660,00'
-        type='Despesa'
-      />
-      <Card
-        description='Salário - Mês Dezembro'
-        cost='6.660,00'
-        type='Entrada'
-      />
-      <Card
-        description='Salário - Mês Dezembro'
-        cost='6.660,00'
-        type='Entrada'
-      />
-      <Card
-        description='Salário - Mês Dezembro'
-        cost='6.660,00'
-        type='Entrada'
-      />
-      <Card
-        description='Salário - Mês Dezembro'
-        cost='6.660,00'
-        type='Despesa'
-      />
-      <Card
-        description='Salário - Mês Dezembro'
-        cost='6.660,00'
-        type='Entrada'
-      />
-      <Card
-        description='Salário - Mês Dezembro'
-        cost='6.660,00'
-        type='Entrada'
-      /> */}
-      {/* <Card/> */}
+      {
+        cardList.length ?
+          cardList
+          :
+          ( 
+            [
+              <p>Você ainda não possui nenhum lançamento</p>,
+              <CardEmpty/>,
+              <CardEmpty/>,
+              <CardEmpty/>
+            ]
+          )
+      }
     </ul>
   )
 }

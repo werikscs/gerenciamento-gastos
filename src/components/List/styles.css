@@ -11,9 +11,23 @@
   margin-bottom: 0;
 }
 
+p{
+  font-family: var(--font-nunito);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-grey-3);
+  margin-bottom: 27px;
+}
+
 @media screen and (max-width: 768px) {
   .card-list::-webkit-scrollbar{
     display: none;
   }
-  
+}
+
+@media screen and (min-width: 768px){
+  p{
+    font-size: 22px;
+  }
 }

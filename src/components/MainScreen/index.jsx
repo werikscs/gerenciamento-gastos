@@ -11,8 +11,8 @@ import { useState } from 'react';
 const MainScreen = ({setIsOnInitialScreen}) => {
 
   const [listTransactions, setListTransactions] = useState([
-    { description: "Salário recebido", type: "Entrada", value: 2500 },
-    { description: "Conta de luz", type: "Despesa", value: -150 }
+    // { description: "Salário recebido", type: "Entrada", value: 2500 },
+    // { description: "Conta de luz", type: "Despesa", value: -150 }
   ]);
   
   const backToInitialScreen = () => {
