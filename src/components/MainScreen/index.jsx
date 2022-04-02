@@ -1,5 +1,6 @@
 import Form from '../Form';
 import MainHeader from '../MainHeader';
+import TotalMoney from '../TotalMoney';
 import './styles.css';
 
 const MainScreen = ({setIsOnInitialScreen}) => {
@@ -14,7 +15,7 @@ const MainScreen = ({setIsOnInitialScreen}) => {
       <main className='main'>
         <section className='main__form-total-money'>
           <Form/>
-          {/* total money */}
+          <TotalMoney/>
         </section>
         {/* List */}
       </main>
