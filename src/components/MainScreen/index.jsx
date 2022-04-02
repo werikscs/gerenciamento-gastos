@@ -1,3 +1,4 @@
+import Filters from '../Filters';
 import Form from '../Form';
 import MainHeader from '../MainHeader';
 import TotalMoney from '../TotalMoney';
@@ -18,7 +19,7 @@ const MainScreen = ({setIsOnInitialScreen}) => {
           <TotalMoney/>
         </section>
         <section className='main__filters-list'>
-          {/* filters */}
+          <Filters/>
           {/* list */}
         </section>
       </main>

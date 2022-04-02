@@ -1,0 +1,30 @@
+.filters{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters__text{
+  font-family: var(--font-nunito);
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--color-grey-4);
+}
+
+.filters__buttons{
+  display: flex;
+  gap: 16px;
+}
+
+.filters__buttons > *{
+  background-color: var(--color-grey-2);
+  color: var(--color-grey-3);
+}
+
+.filters__buttons .first{
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
