@@ -28,7 +28,6 @@ const MainScreen = ({setIsOnInitialScreen}) => {
 
           <Form
             listTransactions={listTransactions}
-            listFiltered={listFiltered}
             setListTransactions={setListTransactions}
             setListFiltered={setListFiltered} />
 

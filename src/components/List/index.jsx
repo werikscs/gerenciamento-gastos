@@ -21,7 +21,7 @@ const List = ({listFiltered, setListFiltered, listTransactions, setListTransacti
         description={description}
         cost={value.toLocaleString('pt-br', {minimumFractionDigits: 2})}
         type={type}
-        callback={deleteCard}
+        deleteCard={deleteCard}
       />
     )
   });
