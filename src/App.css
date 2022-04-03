@@ -8,6 +8,9 @@
   --color-grey-1: #F8F9FA;
   --color-background: #212529;
 
+  --max-width-header-main: 980px;
+  --font-nunito: 'Nunito', sans-serif;
+  --font-inter: 'Inter', sans-serif;
 }
 
 *{
@@ -17,10 +20,8 @@
 }
 
 .App{
-  min-width: 320px;
   width: 100vw;
+  min-width: 320px;
   min-height: 100vh;
-  height: 100%;
-  display: flex;
-  background-color: var(--color-background);
+  background-color: #FFFFFF;
 }

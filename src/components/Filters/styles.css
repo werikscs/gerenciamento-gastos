@@ -1,0 +1,64 @@
+.filters{
+  top: 0;
+  position: sticky;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  z-index: 10;
+}
+
+.filters__text{
+  font-family: var(--font-nunito);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: var(--color-grey-4);
+}
+
+.filters__buttons{
+  display: flex;
+  gap: 16px;
+  overflow: scroll;
+}
+
+.filters__buttons::-webkit-scrollbar{
+  display: none;
+}
+
+.filters__buttons > *{
+  background-color: var(--color-grey-2);
+  color: var(--color-grey-3);
+}
+
+.filters__buttons > *:hover{
+  background-color: var(--color-grey-3);
+  color: var(--color-grey-1);
+}
+
+.filters__buttons .todos{
+  max-width: 69px;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.filters__buttons .todos:hover{
+  background-color: var(--color-primary-2);
+}
+
+.filters__buttons .entradas{
+  max-width: 87px;
+}
+
+.filters__buttons .despesas{
+  max-width: 92px;
+}
+
+@media screen and (min-width: 768px) {
+  .filters{
+    position: static;
+  }
+}
+
