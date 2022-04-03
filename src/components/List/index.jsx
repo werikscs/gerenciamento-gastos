@@ -6,7 +6,6 @@ const List = ({listFiltered, setListFiltered, listTransactions, setListTransacti
 
   const deleteCard = (idToDelete) => {
     const newListTransactions = listTransactions.filter(({id}) => {
-      console.log(id, idToDelete)
       return id !== idToDelete
     })
     // console.log(newListTransactions, idToDelete)
