@@ -6,25 +6,52 @@ import List from '../List';
 
 import './styles.css';
 
+import { useState } from 'react';
+
 const MainScreen = ({setIsOnInitialScreen}) => {
 
+  const [listTransactions, setListTransactions] = useState([]);
+
+  const [listFiltered, setListFiltered] = useState([]);
+  
   const backToInitialScreen = () => {
     setIsOnInitialScreen(true)
   }
 
   return (
     <>
-      <MainHeader backToInitialScreen={backToInitialScreen}/>
+      <MainHeader backToInitialScreen={backToInitialScreen} />
+
       <main className='main'>
+
         <section className='main__form-total-money'>
-          <Form/>
-          <TotalMoney/>
+
+          <Form
+            listTransactions={listTransactions}
+            listFiltered={listFiltered}
+            setListTransactions={setListTransactions}
+            setListFiltered={setListFiltered} />
+
+          <TotalMoney listTransactions={listTransactions} />
+
         </section>
+
         <section className='main__filters-list'>
-          <Filters/>
-          <List/>
+
+          <Filters
+            listTransactions={listTransactions}
+            setListFiltered={setListFiltered} />
+
+          <List
+            listFiltered={listFiltered}
+            listTransactions={listTransactions}
+            setListFiltered={setListFiltered} 
+            setListTransactions={setListTransactions}/>
+
         </section>
+
       </main>
+
     </>
   )
 }

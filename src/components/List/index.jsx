@@ -2,51 +2,46 @@ import Card from '../Card';
 import CardEmpty from '../CardEmpty';
 import './styles.css';
 
-const List = () => {
+const List = ({listFiltered, setListFiltered, listTransactions, setListTransactions}) => {
+
+  const deleteCard = (idToDelete) => {
+    const newListTransactions = listTransactions.filter(({id}) => {
+      console.log(id, idToDelete)
+      return id !== idToDelete
+    })
+    // console.log(newListTransactions, idToDelete)
+    setListTransactions([...newListTransactions]);
+    setListFiltered([...newListTransactions]);
+  }
+
+  const cardList = listFiltered.map(({description, type, value, id}, i) => {
+    return (
+      <Card
+        key={i}
+        id={id}
+        description={description}
+        cost={value.toLocaleString('pt-br', {minimumFractionDigits: 2})}
+        type={type}
+        callback={deleteCard}
+      />
+    )
+  });
+
   return (
     <ul className="card-list">
-      <CardEmpty/>
-      <Card
-        description='Salário - Mês Dezembro'
-        cost='6.660,00'
-        type='Entrada'
-      />
-      <Card
-        description='Salário - Mês Dezembro'
-        cost='6.660,00'
-        type='Despesa'
-      />
-      <Card
-        description='Salário - Mês Dezembro'
-        cost='6.660,00'
-        type='Entrada'
-      />
-      <Card
-        description='Salário - Mês Dezembro'
-        cost='6.660,00'
-        type='Entrada'
-      />
-      <Card
-        description='Salário - Mês Dezembro'
-        cost='6.660,00'
-        type='Entrada'
-      />
-      <Card
-        description='Salário - Mês Dezembro'
-        cost='6.660,00'
-        type='Despesa'
-      />
-      <Card
-        description='Salário - Mês Dezembro'
-        cost='6.660,00'
-        type='Entrada'
-      />
-      <Card
-        description='Salário - Mês Dezembro'
-        cost='6.660,00'
-        type='Entrada'
-      />
-      {/* <Card/> */}
+      {
+        cardList.length ?
+          cardList
+          :
+          ( 
+            [
+              <p>Você ainda não possui nenhum lançamento</p>,
+              <CardEmpty/>,
+              <CardEmpty/>,
+              <CardEmpty/>
+            ]
+          )
+      }
     </ul>
   )
 }
