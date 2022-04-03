@@ -86,6 +86,7 @@
 
 .data__trash-container:hover svg path{
   fill: var(--color-grey-1);
+  pointer-events: none;
 }
 
 .info__type{

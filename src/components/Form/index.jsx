@@ -16,6 +16,7 @@ const Form = ({listTransactions, setListTransactions, setListFiltered}) => {
     e.preventDefault();
 
     updateTransactions({
+      id: listTransactions.length+1,
       description : description,
       type: type,
       value: Number(value)

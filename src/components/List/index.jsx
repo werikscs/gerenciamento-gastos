@@ -2,15 +2,27 @@ import Card from '../Card';
 import CardEmpty from '../CardEmpty';
 import './styles.css';
 
-const List = ({listTransactions}) => {
+const List = ({listFiltered, setListFiltered, listTransactions, setListTransactions}) => {
 
-  const cardList = listTransactions.map(({description, type, value}, i) => {
+  const deleteCard = (idToDelete) => {
+    const newListTransactions = listTransactions.filter(({id}) => {
+      console.log(id, idToDelete)
+      return id !== idToDelete
+    })
+    // console.log(newListTransactions, idToDelete)
+    setListTransactions([...newListTransactions]);
+    setListFiltered([...newListTransactions]);
+  }
+
+  const cardList = listFiltered.map(({description, type, value, id}, i) => {
     return (
       <Card
         key={i}
+        id={id}
         description={description}
         cost={value.toLocaleString('pt-br', {minimumFractionDigits: 2})}
         type={type}
+        callback={deleteCard}
       />
     )
   });

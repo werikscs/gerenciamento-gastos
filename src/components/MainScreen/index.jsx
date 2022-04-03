@@ -10,12 +10,9 @@ import { useState } from 'react';
 
 const MainScreen = ({setIsOnInitialScreen}) => {
 
-  const [listTransactions, setListTransactions] = useState([
-    { description: "Salário recebido", type: "Entrada", value: 2500 },
-    { description: "Conta de luz", type: "Despesa", value: -150 }
-  ]);
+  const [listTransactions, setListTransactions] = useState([]);
 
-  const [listFiltered, setListFiltered] = useState(listTransactions);
+  const [listFiltered, setListFiltered] = useState([]);
   
   const backToInitialScreen = () => {
     setIsOnInitialScreen(true)
@@ -31,6 +28,7 @@ const MainScreen = ({setIsOnInitialScreen}) => {
 
           <Form
             listTransactions={listTransactions}
+            listFiltered={listFiltered}
             setListTransactions={setListTransactions}
             setListFiltered={setListFiltered} />
 
@@ -42,10 +40,13 @@ const MainScreen = ({setIsOnInitialScreen}) => {
 
           <Filters
             listTransactions={listTransactions}
-            listFiltered={listFiltered}
             setListFiltered={setListFiltered} />
 
-          <List listTransactions={listFiltered} />
+          <List
+            listFiltered={listFiltered}
+            listTransactions={listTransactions}
+            setListFiltered={setListFiltered} 
+            setListTransactions={setListTransactions}/>
 
         </section>
 

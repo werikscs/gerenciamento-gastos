@@ -1,10 +1,11 @@
 import Button from '../Button';
 import './styles.css';
 
-const Filters = ({listTransactions, listFiltered, setListFiltered}) => {
+const Filters = ({listTransactions, setListFiltered}) => {
 
   const filterBy = (category) => {
-    const re = RegExp(category, 'g');
+
+    const re = RegExp(category);
     const filtered = listTransactions.filter(({type}) => re.test(type));
     setListFiltered(filtered)
   }
@@ -19,7 +20,7 @@ const Filters = ({listTransactions, listFiltered, setListFiltered}) => {
         <Button
           className="btnHeight40 todos"
           text="Todos"
-          callback={() => filterBy()}/>
+          callback={() => filterBy('')}/>
 
         <Button
           className="btnHeight40 entradas"
