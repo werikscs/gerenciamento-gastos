@@ -122,7 +122,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .types select{
   width: 100%;
-  max-width: 150px;
+  /* max-width: 150px; */
   font-size: 12px;
   font-weight: 400;
   line-height: 26px;
@@ -130,6 +130,13 @@ input[type=number]::-webkit-outer-spin-button {
   background: url('../../img/ANGLE-DOWN.svg') no-repeat right;
   background-position: right 16px bottom 50%;
 }
+
+/* .types select option{
+  margin: 10px;
+  padding: 8px 0 8px 9px;
+  height: 100px;
+  background-color: red;
+} */
 
 .values span{
   position: absolute;
