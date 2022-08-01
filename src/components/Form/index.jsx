@@ -1,51 +1,47 @@
-import { useState } from 'react';
-import './styles.css';
+import { useState } from "react";
+import "./styles.css";
 
-const Form = ({listTransactions, setListTransactions, setListFiltered}) => {
-
-  const [description, setDescription] = useState('');
-  const [value, setValue] = useState('');
-  const [type, setType] = useState('Entrada');
+const Form = ({ listTransactions, setListTransactions, setListFiltered }) => {
+  const [description, setDescription] = useState("");
+  const [value, setValue] = useState("");
+  const [type, setType] = useState("Entrada");
 
   const updateTransactions = (transaction) => {
     setListTransactions([...listTransactions, transaction]);
     setListFiltered([...listTransactions, transaction]);
-  }
+  };
 
   const handleData = (e) => {
     e.preventDefault();
 
     updateTransactions({
-      id: listTransactions.length+1,
-      description : description,
+      id: listTransactions.length + 1,
+      description: description,
       type: type,
-      value: Number(value)
-    })
+      value: type === "Entrada" ? Number(value) : -Number(value),
+    });
 
-    setDescription('');
-    setValue('');
-    setType('Entrada');
-  }
+    setDescription("");
+    setValue("");
+    setType("Entrada");
+  };
 
   return (
     <>
       <form onSubmit={handleData}>
-
         <section className="form__description">
-          <label className='description'>Descrição</label>
+          <label className="description">Descrição</label>
           <input
             type="text"
             placeholder="Digite aqui sua descrição"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
-          <label className='example'>Ex: Compra de roupas</label>
+          <label className="example">Ex: Compra de roupas</label>
         </section>
 
         <section className="form__values">
-
           <section className="values">
-
             <label>Valor</label>
 
             <section>
@@ -53,14 +49,13 @@ const Form = ({listTransactions, setListTransactions, setListFiltered}) => {
                 type="number"
                 placeholder="1"
                 value={value}
-                onChange={(e) => setValue(e.target.value)}/>
+                onChange={(e) => setValue(e.target.value)}
+              />
               <span>R$</span>
             </section>
-
           </section>
 
           <section className="types">
-
             <label>Tipo de valor</label>
 
             <section>
@@ -69,16 +64,13 @@ const Form = ({listTransactions, setListTransactions, setListFiltered}) => {
                 <option value="Despesa">Despesa</option>
               </select>
             </section>
-
           </section>
-
         </section>
 
-        <button type='submit'>Inserir valor</button>
-
+        <button type="submit">Inserir valor</button>
       </form>
     </>
-  )
-}
+  );
+};
 
 export default Form;
